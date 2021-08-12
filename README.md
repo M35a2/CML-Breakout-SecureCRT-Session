@@ -18,7 +18,10 @@ on main.py edit server, username, password, and lab number.
 
 This python app will create a new folder and all the telnet sessions for the lab. 
 Port numbers are listed in front of the devices name so you can quickly bounce it off the breakout tool if something doesnt seem right...
+
 ![alt text](https://github.com/M35a2/CML-Breakout-SecureCRT-Session/blob/main/Capture.PNG?raw=true)
+
+easist way to update a lab after adding/deleting devices is to just delete the lab folder in secureCRT, rerun the script, and restart secureCRT
 
 Known issues:
 only tested on wan emulators, routers, switches... 
