@@ -16,5 +16,5 @@ Variables to edit:
 on main.py edit server, username, password, and lab number. 
 
 This python app will create a new folder and all the telnet sessions for the lab. 
-
+![alt text](https://github.com/M35a2/CML-Breakout-SecureCRT-Session/blob/main/capture.png?raw=true)
 
