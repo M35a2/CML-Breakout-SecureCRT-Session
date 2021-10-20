@@ -48,5 +48,30 @@ This has not been tested on every node type.
 Some nodes only add by 1 port number in the breakout tool, some add by 2.
 if you devices got out of order, check the breakout tool and see if it only added by one port after the device where it became out of order. 
 if so, you can add that node definition to the "if" statement starting on line 71 of main.py
+```
+        # if any custom nodes are added, and they dont add by 2 ports in the breakout tool
+        # add the node definition to the if statement below to only add by 1 port. 
+        if (response.get("node_definition") == "wan_emulator" or 
+                response.get("node_definition") == "asav" or 
+                response.get("node_definition") == "ftdv" or
+                response.get("node_definition") == "server" or
+                response.get("node_definition") == "alpine" or
+                response.get("node_definition") == "coreos" or
+                response.get("node_definition") == "desktop" or
+                response.get("node_definition") == "ubuntu" or
+           ---> response.get("node_definition") == "CustomNode1" or
+           ---> response.get("node_definition") == "CustomNode2"):
+            # only add 1 to port number for the next device
+            port = port + 1
+```
+the node definition is printed out with each item created so you know what the name is to add.
 Likewise, if there is a node that cannot be consoled into, add it to the "elif" statement on line 47
+```
+    # dont count devices that cannot be consoled into    
+    elif (response.get("node_definition") == "external_connector" or
+            response.get("node_definition") == "unmanaged_switch"):
+        # increment node number
+        n_id = n_id + 1    
+```
+Good luck
 
