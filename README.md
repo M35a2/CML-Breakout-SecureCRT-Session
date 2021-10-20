@@ -69,7 +69,8 @@ Likewise, if there is a node that cannot be consoled into, add it to the "elif" 
 ```
     # dont count devices that cannot be consoled into    
     elif (response.get("node_definition") == "external_connector" or
-            response.get("node_definition") == "unmanaged_switch"):
+            response.get("node_definition") == "unmanaged_switch" or
+            response.get("node_definition") == "some other node definition that doesnt have a console"):
         # increment node number
         n_id = n_id + 1    
 ```
