@@ -26,6 +26,7 @@ to run the script:
 - run main.py file to start the program 
 
 Example:
+```
 C:\Users\Admin\Documents\CML-Breakout-SecureCRT-Session> python .\main.py
 creating: internet Node Definition: iosv
 creating: csr-sdwan-3-1 Node Definition: csr1000v
@@ -38,7 +39,7 @@ Nodes 0-99 checked. if you need more, increase the number checked in the while l
 example: while n_id < 150:
 exiting...
 C:\Users\Admin\Documents\CML-Breakout-SecureCRT-Session>
-
+```
 
 easist way to update a lab after adding/deleting devices is to just delete the lab folder in secureCRT, rerun the script, and restart secureCRT
 
