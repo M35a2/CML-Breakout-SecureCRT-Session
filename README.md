@@ -14,7 +14,7 @@ Tested on:
 - secureCRT 9.0.2
 
 Variables to edit:
-on main.py edit server, username, password, and lab number. 
+in login.yaml edit the server name, username, password, and lab number. 
 
 This python app will create a new folder and all the telnet sessions for the lab. 
 Port numbers are listed in front of the devices name so you can quickly bounce it off the breakout tool if something doesnt seem right...
@@ -24,6 +24,9 @@ Port numbers are listed in front of the devices name so you can quickly bounce i
 easist way to update a lab after adding/deleting devices is to just delete the lab folder in secureCRT, rerun the script, and restart secureCRT
 
 Known issues:
-only tested on wan emulators, routers, switches... 
-i haven't tested on anything that requires VNC or breakout might handle differently than adding by two port numbers. 
+This has not been tested on every node type.
+Some nodes only add by 1 port number in the breakout tool, some add by 2.
+if you devices got out of order, check the breakout tool and see if it only added by one port after the device where it became out of order. 
+if so, you can add that node definition to the "if" statement starting on line 71 of main.py
+Likewise, if there is a node that cannot be consoled into, add it to the "elif" statement on line 47
 
