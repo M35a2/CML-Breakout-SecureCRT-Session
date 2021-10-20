@@ -22,7 +22,7 @@ Port numbers are listed in front of the devices name so you can quickly bounce i
 ![alt text](https://github.com/M35a2/CML-Breakout-SecureCRT-Session/blob/main/Capture.PNG?raw=true)
 
 to run the script:
-- edit the variables in login.yaml (note: the lab number is the url when opening the lab on the cml server)
+- edit the variables in login.yaml (note: you can find the lab number in the url when opening the lab on the cml server webpage)
 - run main.py file to start the program 
 
 Example:
